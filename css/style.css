@@ -1,0 +1,279 @@
+:root {
+  --main-white: #fff;
+  --main-gray: #707070;
+  --bg-color: #F5F6F7;
+  --btn-green: #8FAD5B;
+  --btn-blue: #52B5D9;
+  --btn-brown: #786D60;
+  --hover-color: #A38A1F;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: var(--main-gray);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/* ヘッダートップ */
+header {
+  background: linear-gradient(to bottom,
+  rgb(255, 255, 255),
+  rgba(250, 250, 250, 0.8),
+  rgba(240, 240, 240, 0)
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15rem;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.header-inner a {
+  font-size: 0.8rem;
+}
+
+.logo img {
+  height: 5rem;
+  width: auto;
+  display: block;
+  margin: 0;
+}
+
+.btn {
+  color: var(--main-white);
+}
+
+.sub-nav {
+  display: flex;
+  margin-right: 4.5rem;
+  gap: 2.5rem;
+}
+
+.sub-nav a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.sub-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: var(--main-gray);
+  transition: width 0.3s ease;
+}
+
+.sub-nav a:hover::after {
+  width: 100%;
+}
+
+.cta-btn {
+  display: flex;
+  gap: 18px;
+  width: auto;
+}
+
+.cta-btn a {
+  display: inline-block;
+  width: 10.5rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.entry-btn {
+  background-color: var(--btn-green);
+  transition: color 0.3s ease;
+}
+
+.reserve-btn {
+  background-color: var(--btn-blue);
+}
+
+.entry-btn,
+.reserve-btn {
+  transition: background-color 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.entry-btn:hover,
+.reserve-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ヘッダーメニュー */
+.main-nav ul {
+  display: flex;
+  gap: 4.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-nav a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: rgb(58, 35, 14);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* メインビジュアル */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+/* キャチコピー */
+.catchcopy {
+  background-color: var(--bg-color);
+  text-align: center;
+  overflow: hidden;
+}
+
+.catchcopy h2,h3 {
+  color: var(--main-gray);
+}
+
+.catchcopy h2 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.catchcopy h3 {
+  margin: 0.5rem 0;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+}
+
+.catchcopy ul {
+  color: var(--hover-color);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+}
+
+.catchcopy li {
+  background-color: var(--main-white);
+  border: 1px solid var(--main-gray);
+  padding: 0.4rem 4rem;
+  margin: 1rem 0 1.5rem 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: 1rem;
+}
+
+/* セクション全体 */
+.section-list {
+  text-align: center;
+}
+.section-list h2 {
+  color: var(--main-gray);
+  font-size: 2rem;
+  margin: 4rem 0 1.5rem 0;
+}
+.section-list p {
+  color: var(--main-gray);
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.section-btn {
+  display: inline-block;
+  background-color: var(--btn-brown);
+  padding: 0.9rem 5rem;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  box-shadow: 3px 3px 4px rgba(209, 209, 209, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.section-btn:hover {
+  background-color: #A38A1F;
+}
+
+
+/* ロケーション */
+.location img {
+  width: 100%;
+}
+
+.location-column img {
+  width: 500px;
+}
+
+/* アクセス */
+.access img {
+  width: 100%;
+}
+
+/* プラン */
+.plan img {
+  width: 100%;
+}
+
+.plan-column img {
+  width: 270px;
+}
+
+/* フッター */
+footer {
+  background-color: var(--bg-color);
+}
