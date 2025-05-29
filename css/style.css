@@ -3,9 +3,9 @@
   --main-gray: #707070;
   --bg-color: #F5F6F7;
   --btn-green: #8FAD5B;
-  --btn-blue: #52B5D9;
+  --btn-blue: #4CA8C7;
   --btn-brown: #786D60;
-  --hover-color: #A38A1F;
+  --hover-color: #D5B66A;
 }
 
 /* Reset */
@@ -73,10 +73,6 @@ header {
   margin: 0;
 }
 
-.btn {
-  color: var(--main-white);
-}
-
 .sub-nav {
   display: flex;
   margin-right: 4.5rem;
@@ -104,6 +100,11 @@ header {
   width: 100%;
 }
 
+/* ボタン */
+.btn {
+  color: var(--main-white);
+}
+
 .cta-btn {
   display: flex;
   gap: 18px;
@@ -119,23 +120,53 @@ header {
 
 .entry-btn {
   background-color: var(--btn-green);
-  transition: color 0.3s ease;
 }
-
 .reserve-btn {
   background-color: var(--btn-blue);
 }
+.request-btn {
+  background-color: var(--hover-color)
+}
+.section-btn {
+  display: inline-block;
+  background-color: var(--btn-brown);
+  padding: 0.9rem 5rem;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
 
 .entry-btn,
-.reserve-btn {
+.reserve-btn,
+.request-btn,
+.section-btn {
   transition: background-color 0.3s ease, filter 0.3s ease;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .entry-btn:hover,
-.reserve-btn:hover {
+.reserve-btn:hover,
+.request-btn:hover,
+.section-btn:hover {
   filter: brightness(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.information .cta-btn {
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.information-cta-btn {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 2rem auto 2rem;
+  gap: 2rem;
+}
+
+.information .request-btn,
+.information .reserve-btn {
+  padding: 0.9rem 5rem;
 }
 
 /* ヘッダーメニュー */
@@ -235,20 +266,21 @@ header {
   margin-bottom: 2rem;
 }
 
-.section-btn {
-  display: inline-block;
-  background-color: var(--btn-brown);
-  padding: 0.9rem 5rem;
-  margin: 2rem 0;
-  font-size: 0.9rem;
-  box-shadow: 3px 3px 4px rgba(209, 209, 209, 0.6);
-  transition: background-color 0.3s ease;
+.location-photo {
+  max-width: 1280px;
+  max-height: 700px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.section-btn:hover {
-  background-color: #A38A1F;
+.location-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
-
 
 /* ロケーション */
 .location img {
@@ -257,6 +289,20 @@ header {
 
 .location-column img {
   width: 500px;
+}
+
+.location-carousel {
+  display: flex;
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 2rem auto 0;
+  justify-content: space-between;
+}
+
+.location-carousel img {
+  flex: 1;
+  max-width: calc((1280px - 3 * 1.5rem) / 4);
+  height: auto;
 }
 
 /* アクセス */
@@ -273,7 +319,44 @@ header {
   width: 270px;
 }
 
+.plan-carousel {
+  display: flex;
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 2rem auto 0;
+  justify-content: space-between;
+}
+
+.plan-carousel img {
+  flex: 1;
+  max-width: calc((1280px - 3 * 1.5rem) / 4);
+  height: auto;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+}
+
+.plan-carousel img:hover {
+  opacity: 0.5;
+}
+
+/* インフォメーション */
+.tel-btn {
+  display: block;
+  font-size: 1.7rem;
+}
+
+.fa-phone {
+  margin-right: 0.6rem;
+}
+
 /* フッター */
 footer {
   background-color: var(--bg-color);
+  padding: 2.5rem 0;
+}
+
+footer p {
+  text-align: center;
+  color: var(--main-gray);
+  font-size: 0.6rem;
 }
