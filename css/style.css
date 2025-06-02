@@ -397,6 +397,8 @@ footer p {
    ================================ */
 .cta-btn-fixed{ display:none; }
 
+
+
 /* ================================
    モバイル（〜768px）
    ================================ */
@@ -565,5 +567,28 @@ footer .wrapper p {
   pointer-events: none;
   transform: translateY(100%);
 }
+}
 
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+/* カルーセル本体 */
+.location-carousel{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:1rem;
+  overflow:visible;
+}
+
+.location-carousel img{
+  flex:0 0 calc(50% - .5rem);
+  max-width:calc(50% - .5rem);
+  width:100%;
+  height:auto;
+}
+
+.carousel-btn{
+  display:none;
+}
 }
