@@ -6,7 +6,9 @@
   <title>フォレストテラス翠公園</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
+
 <body>
   <header>
     <div class="wrapper">
@@ -29,6 +31,10 @@
 
     </div>
 
+<button class="hamburger" aria-label="メニュー">
+  <span></span><span></span><span></span>
+</button>
+
     <nav class="main-nav">
       <ul>
         <li><a href="#">トップ</a></li>
@@ -41,6 +47,11 @@
 
     </div>
   </header>
+
+<div class="cta-btn-fixed">
+  <a class="btn entry-btn"   href="#">物件エントリー</a>
+  <a class="btn reserve-btn" href="#">来場予約</a>
+</div>
 
   <section class="hero">
     <div class="wrapper">
@@ -71,12 +82,14 @@
       </div>
 
       <div class="location-carousel-wrapper">
-      <div class="location-carousel">
-        <img src="img/library.png" alt="翠公園図書館の写真">
-        <img src="img/shoppingmall.png" alt="ショッピングモールの写真">
-        <img src="img/park.png" alt="翠公園の写真">
-        <img src="img/cafe.png" alt="カフェの写真">
-      </div>
+        <button class="carousel-btn prev" aria-label="前へ">◀︎</button>
+          <div class="location-carousel" aria-label="ロケーション画像一覧">
+            <img src="img/library.png" alt="翠公園図書館の写真">
+            <img src="img/shoppingmall.png" alt="ショッピングモールの写真">
+            <img src="img/park.png" alt="翠公園の写真">
+            <img src="img/cafe.png" alt="カフェの写真">
+          </div>
+        <button class="carousel-btn next" aria-label="次へ">▶︎</button>
       </div>
       <a class="btn section-btn" href="#">Read more</a>
     </div>
@@ -128,6 +141,8 @@
       <p>本サイトは「フォレストテラス翠公園」のイメージ訴求を目的としたデモンストレーションページです。<br>掲載の情報・画像・文章はすべて架空のものであり、実際の物件・企業・サービスとは一切関係ありません。</p>
     </div>
   </footer>
+
+<script src="./js/script.js"></script>
 
 
 </body>
