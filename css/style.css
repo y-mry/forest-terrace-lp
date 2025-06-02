@@ -505,6 +505,10 @@ display:none;
   scroll-snap-align: center;
 }
 
+.carousel-btn {
+  display: flex;
+}
+
 /* キャッチコピー */
 .catchcopy {
   padding-bottom: 1rem;
