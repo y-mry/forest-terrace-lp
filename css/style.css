@@ -392,11 +392,14 @@ footer p {
   display:none;                   /* Chrome / Safari */
 }
 
-/* ================================
-   下部CTA非表示(PC)
-   ================================ */
+
+/* 下部CTA非表示(PC) */
 .cta-btn-fixed{ display:none; }
 
+/* カルーセル矢印非表示(PC) */
+.carousel-btn {
+  display: none;
+}
 
 
 /* ================================
